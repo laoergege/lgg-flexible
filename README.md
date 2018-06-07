@@ -36,7 +36,7 @@ npm i -S lgg-flexible
 ### Import
 
 ```
-<script src="./node_modules/lgg-flexible/flexible.min.js"></script>
+<script src="./node_modules/lgg-flexible/dist/flexible.min.js"></script>
 <script>
     new flexible.default();
 </script>
@@ -45,13 +45,13 @@ npm i -S lgg-flexible
 ### use
 ```
 //commonjs
-const flexible = require("./flexible.js").default;
+const flexible = require("lgg-flexible/lib/flexible.js").default;
 // 不传参
 new flexible();
 
 
 // esmodule
-import flexible from "../lib/flexible";
+import flexible from "lgg-flexible/lib/flexible.js";
 /*
 * params: 默认 {isHD: true, pcREM: undefined}
 * isHD 是否开启高清适配，但pc端会关闭
