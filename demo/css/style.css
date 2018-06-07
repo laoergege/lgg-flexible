@@ -1,0 +1,113 @@
+@media only screen and (min-width: 980px) {
+  [data-mobile="false"] .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+}
+
+body[data-dpr="3"] {
+  font-size: 48px;
+}
+
+body[data-dpr="2"] {
+  font-size: 32px;
+}
+
+body[data-dpr="1"] {
+  font-size: 16px;
+}
+
+body .container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  flex-direction: column;
+  height: 100vh;
+}
+
+body .container header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0.13333rem 0;
+}
+
+body .container header .intro {
+  position: absolute;
+  left: .1rem;
+  top: .7rem;
+  color: #575c5c;
+  transform: skew(0deg, -30deg);
+}
+
+body .container header .avator {
+  height: 2.66667rem;
+  width: 2.66667rem;
+  border-radius: 50%;
+  border: 8px solid white;
+}
+
+body .container header h4, body .container header h5 {
+  margin: 0.13333rem 0;
+}
+
+body .container article {
+  flex: 1;
+  overflow: auto;
+}
+
+body .container article .item {
+  background-color: white;
+  box-shadow: 5px 10px 10px #aea9a9;
+  border-radius: .5rem;
+  padding: .2rem;
+  margin: .2rem;
+}
+
+body .container article .item .title {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+}
+
+body .container article .item .title .hl {
+  flex: 1;
+  margin: 0 2%;
+  border-top: 3px solid #dad6d6;
+}
+
+body .container article .item .content {
+  font-size: 0.8em;
+  overflow: hidden;
+  height: 100%;
+  transition: heigth 1s linear;
+}
+
+body .container article .item .content.hidden {
+  height: 0;
+}
+
+body .container footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .container footer div {
+  flex: 1;
+  margin: 0 2%;
+  border-top: 3px solid #dad6d6;
+}
+
+body .container footer .github {
+  height: .8rem;
+}
+/*# sourceMappingURL=style.css.map */

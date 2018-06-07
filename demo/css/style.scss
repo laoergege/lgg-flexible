@@ -1,0 +1,124 @@
+@import "./variable.scss";
+
+@function px2rem($px){
+    $rem: 75px;
+    @return ($px/$rem) + rem
+}
+
+@mixin line{
+    border-top: 3px solid #dad6d6;
+}
+
+@media only screen and (min-width: 980px){
+    [data-mobile="false"] .container{
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+   
+
+    &[data-dpr="3"]{
+        font-size: 48px;
+    }
+
+    &[data-dpr="2"]{
+        font-size: 32px;
+    }
+    
+    &[data-dpr="1"]{
+        font-size: 16px;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+        margin:0 auto;
+        flex-direction: column;
+        height: 100vh;
+
+        header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: px2rem(10px) 0;
+
+            .intro{
+                position: absolute;
+                left: .1rem;
+                top: .7rem;
+                color: #575c5c;
+                transform: skew(0deg, -30deg);
+            }
+
+            .avator{
+                height: px2rem(200px);
+                width: px2rem(200px);
+                border-radius: 50%;
+                border: 8px solid white;
+            }
+
+            h4, h5{
+                margin: px2rem(10px) 0;
+            }
+        }
+
+        article{
+            flex: 1;
+            overflow: auto;
+
+            .item{
+                background-color: white;
+                box-shadow: 5px 10px 10px #aea9a9;
+                border-radius: .5rem;
+                padding: .2rem;
+                margin: .2rem;
+
+                .title{
+                    display: flex;
+                    justify-content: center;
+                    padding: 10px;
+                    align-items: center;
+
+                    .hl{
+                        flex: 1;
+                        margin: 0 2%;
+                        @include line;
+                    }
+                }
+                .content{
+                    font-size: 0.8em;
+                    overflow: hidden;
+                    height: 100%;
+                    transition: heigth 1s linear;
+
+                    &.hidden{
+                        height: 0;
+                    }
+                }
+            }
+        }
+
+        footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            div{
+                flex: 1;
+                margin: 0 2%;
+                @include line;
+            }
+
+            .github{
+               height: .8rem;
+            }
+        }
+    }
+}
+
