@@ -1,8 +1,6 @@
 # lgg-flexible
 看来了一些关于移动端布局的资料，目前最佳的移动端移动端适配方案（flex + rem + dpr）, 自己也根据原理写了 lgg-flexible， 主要动态控制 rem 和 dpr 来适配不同移动端。增加一些特性可去调控 rem 适配带来 PC 一些问题。
 
-[demo]()
-
 ## table
 
 - [lgg-flexible](#lgg-flexible)
@@ -12,6 +10,7 @@
         - [Install](#install)
         - [Import](#import)
         - [use](#use)
+    - [Demo](#demo)
     - [移动适配方案(flex + rem + dpr)](#flex-rem-dpr)
         - [前言](#)
         - [设备独立像素(px)](#px)
@@ -59,6 +58,16 @@ import flexible from "../lib/flexible";
 * pcREM 当设备为pc时，可传入固定 rem 值
 */ 
 new flexible({isHD: true, pcREM: 46});
+```
+
+## Demo
+
+```
+git clone https://github.com/laoergege/lgg-flexible.git
+
+npm intall
+
+npm run dev // 访问 http://localhost:8080/
 ```
 
 ## 移动适配方案(flex + rem + dpr)
